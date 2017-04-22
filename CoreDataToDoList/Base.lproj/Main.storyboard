@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6wd-1x-fFm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5it-yX-MNY">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84526946519797652" green="0.93156243180223763" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5it-yX-MNY" secondAttribute="trailing" id="1Y1-Nx-Yi7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5it-yX-MNY" secondAttribute="bottom" id="6gK-ip-HPV"/>
+                            <constraint firstItem="5it-yX-MNY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ore-Up-6tI"/>
+                            <constraint firstItem="5it-yX-MNY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cc7-aq-pn3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="To Do" id="cKH-yR-e0o">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wdy-QZ-oAb">
+                            <connections>
+                                <segue destination="9aW-6e-KF4" kind="show" id="CVp-dG-7cX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="5it-yX-MNY" id="2y0-6a-Cbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--New Task-->
+        <scene sceneID="PdM-bF-oaa">
+            <objects>
+                <viewController id="9aW-6e-KF4" customClass="AddTaskViewController" customModule="CoreDataToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1Q-9P-6uR"/>
+                        <viewControllerLayoutGuide type="bottom" id="lgN-Yi-1Sw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wvF-yd-Eca">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your Task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8t-zw-yC4">
+                                <rect key="frame" x="36" y="84" width="253" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcq-lm-3vI">
+                                <rect key="frame" x="310" y="84" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84526946520000001" green="0.93156243179999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O8t-zw-yC4" firstAttribute="top" secondItem="x1Q-9P-6uR" secondAttribute="bottom" constant="20" id="Do1-Pi-Mzc"/>
+                            <constraint firstItem="wcq-lm-3vI" firstAttribute="top" secondItem="O8t-zw-yC4" secondAttribute="top" id="SeF-Im-fze"/>
+                            <constraint firstItem="wcq-lm-3vI" firstAttribute="trailing" secondItem="wvF-yd-Eca" secondAttribute="trailingMargin" id="ZTw-nZ-V3r"/>
+                            <constraint firstItem="O8t-zw-yC4" firstAttribute="leading" secondItem="wvF-yd-Eca" secondAttribute="leadingMargin" constant="20" id="m1G-vy-YP5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O8t-zw-yC4" secondAttribute="trailing" constant="70" id="xeQ-rq-D5k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Task" id="bXR-5r-DcI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kcd-ZE-Raj">
+                            <connections>
+                                <action selector="btnDone:" destination="9aW-6e-KF4" id="kUc-3L-uhH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="isImp" destination="wcq-lm-3vI" id="gXL-2p-RNz"/>
+                        <outlet property="textField" destination="O8t-zw-yC4" id="tE9-37-mTm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fH-tf-AlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.8" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oZq-IU-VL0">
+            <objects>
+                <navigationController id="6wd-1x-fFm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="abl-w9-xHp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15077096919379573" green="0.52667556903315038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VwT-YL-Brf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXi-ql-Lxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-825"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+</document>
